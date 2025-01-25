@@ -1,0 +1,77 @@
+/* From Uiverse.io by m1her */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(70px) rotateX(55deg);
+    overflow: hidden;
+}
+
+.street {
+    width: 60px;
+    height: 110px;
+    background-color: #525c62;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lines {
+    width: 5px;
+    height: 100%;
+    background: repeating-linear-gradient(#fff 0px,
+            #fff 10px,
+            transparent 10px,
+            transparent 20px);
+    animation: moveLines 0.6s linear infinite;
+}
+
+.trees-path {
+    width: 20px;
+    height: 110px;
+    background-color: #696868;
+}
+
+.sidewalk {
+    width: 8px;
+    height: 110px;
+    position: relative;
+    background: repeating-linear-gradient(#fff 0px,
+            #fff 11px,
+            #313131 9px,
+            #313131 19px);
+    animation: moveLines 0.6s linear infinite;
+}
+
+.sidewalk-shadow {
+    position: absolute;
+    top: 0px;
+    width: 5px;
+    height: 100%;
+    background: repeating-linear-gradient(#535353 0px,
+            #535353 12.5px,
+            #000 9px,
+            #000 19px);
+    animation: moveLines 0.6s linear infinite;
+}
+
+.left {
+    left: 100%;
+    transform: skew(0deg, 30deg);
+}
+
+.right {
+    left: -5px;
+    transform: skew(0deg, -30deg);
+}
+
+@keyframes moveLines {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 20px;
+        /* Change this value based on your design */
+    }
+}

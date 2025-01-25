@@ -1,0 +1,80 @@
+/* From Uiverse.io by Juanes200122 */
+#svg_svg {
+    zoom: 0.3;
+}
+
+.estrobo_animation {
+    animation:
+        floatAndBounce 4s infinite ease-in-out,
+        strobe 0.8s infinite;
+}
+
+.estrobo_animationV2 {
+    animation:
+        floatAndBounce 4s infinite ease-in-out,
+        strobev2 0.8s infinite;
+}
+
+#float_server {
+    animation: floatAndBounce 4s infinite ease-in-out;
+}
+
+@keyframes floatAndBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes strobe {
+
+    0%,
+    50%,
+    100% {
+        fill: #17e300;
+    }
+
+    25%,
+    75% {
+        fill: #17e300b4;
+    }
+}
+
+@keyframes strobev2 {
+
+    0%,
+    50%,
+    100% {
+        fill: rgb(255, 95, 74);
+    }
+
+    25%,
+    75% {
+        fill: rgb(16, 53, 115);
+    }
+}
+
+/* Animación de los colores del gradiente */
+@keyframes animateGradient {
+    0% {
+        stop-color: #313f8773;
+    }
+
+    50% {
+        stop-color: #040d3a;
+    }
+
+    100% {
+        stop-color: #313f8773;
+    }
+}
+
+/* Animación aplicada a los puntos del gradiente */
+#paint13_linear_163_1030 stop {
+    animation: animateGradient 4s infinite alternate;
+}
